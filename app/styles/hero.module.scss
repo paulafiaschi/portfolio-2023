@@ -1,0 +1,138 @@
+$linar-gradient: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+  rotateY(0deg) rotateZ(0deg) skew(0deg);
+$hero-transition: width 1s, height 1s, transform 1s;
+
+.heroGrid {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  border: solid 2px black;
+  margin: 40px;
+
+  > * {
+    border: solid 2px black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    background: none;
+    width: 20%;
+    height: 20%;
+    transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg);
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+
+  .work {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    transition: $hero-transition;
+
+    &:hover {
+      animation-name: work-hover;
+
+      @keyframes work-hover {
+        from {
+          width: 60%;
+          height: 40%;
+        }
+        to {
+          width: 70%;
+          height: 50%;
+        }
+      }
+
+      & ~ .about {
+        width: 50%;
+        height: 50%;
+      }
+
+      & ~ .play {
+        width: 50%;
+        height: 30%;
+      }
+
+      & ~ .connect {
+        width: 30%;
+        height: 70%;
+      }
+
+      & ~ .logo {
+        transform: translate3d(50%, 50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(0deg) skew(0deg);
+        transition: $hero-transition;
+      }
+    }
+  }
+  .connect {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    transition: $hero-transition;
+
+    &:hover {
+      width: 70%;
+      height: 50%;
+
+      & ~ .about {
+        width: 50%;
+        height: 50%;
+      }
+
+      & ~ .play {
+        width: 50%;
+        height: 30%;
+      }
+
+      & ~ .work {
+        width: 30%;
+        height: 70%;
+      }
+    }
+  }
+
+  .about {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    transition: $hero-transition;
+  }
+  .play {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    transition: $hero-transition;
+  }
+}

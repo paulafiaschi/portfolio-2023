@@ -46,18 +46,8 @@ $hero-transition: width 1s, height 1s, transform 1s;
     transition: $hero-transition;
 
     &:hover {
-      animation-name: work-hover;
-
-      @keyframes work-hover {
-        from {
-          width: 60%;
-          height: 40%;
-        }
-        to {
-          width: 70%;
-          height: 50%;
-        }
-      }
+      width: 70%;
+      height: 50%;
 
       & ~ .about {
         width: 50%;
@@ -91,26 +81,6 @@ $hero-transition: width 1s, height 1s, transform 1s;
     left: auto;
     right: 0;
     transition: $hero-transition;
-
-    &:hover {
-      width: 70%;
-      height: 50%;
-
-      & ~ .about {
-        width: 50%;
-        height: 50%;
-      }
-
-      & ~ .play {
-        width: 50%;
-        height: 30%;
-      }
-
-      & ~ .work {
-        width: 30%;
-        height: 70%;
-      }
-    }
   }
 
   .about {

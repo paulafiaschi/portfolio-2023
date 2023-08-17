@@ -1,9 +1,8 @@
-$linar-gradient: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-  rotateY(0deg) rotateZ(0deg) skew(0deg);
+$blue-gradient: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 $hero-transition: width 1s, height 1s, transform 1s;
 
 .heroGrid {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-image: $blue-gradient;
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -11,6 +10,7 @@ $hero-transition: width 1s, height 1s, transform 1s;
   right: 0%;
   border: solid 2px black;
   margin: 40px;
+  z-index: 99;
 
   > * {
     border: solid 2px black;
@@ -32,6 +32,7 @@ $hero-transition: width 1s, height 1s, transform 1s;
     position: absolute;
     top: 40%;
     left: 40%;
+    border: none;
   }
 
   .work {
@@ -45,32 +46,33 @@ $hero-transition: width 1s, height 1s, transform 1s;
     right: auto;
     transition: $hero-transition;
 
-    &:hover {
-      width: 70%;
-      height: 50%;
+    // &:hover {
+    //   width: 70%;
+    //   height: 50%;
 
-      & ~ .about {
-        width: 50%;
-        height: 50%;
-      }
+    //   & ~ .about {
+    //     width: 50%;
+    //     height: 50%;
+    //   }
 
-      & ~ .play {
-        width: 50%;
-        height: 30%;
-      }
+    //   & ~ .play {
+    //     width: 50%;
+    //     height: 30%;
+    //   }
 
-      & ~ .connect {
-        width: 30%;
-        height: 70%;
-      }
+    //   & ~ .connect {
+    //     width: 30%;
+    //     height: 70%;
+    //   }
 
-      & ~ .logo {
-        transform: translate3d(50%, 50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg);
-        transition: $hero-transition;
-      }
-    }
+    //   & ~ .logo {
+    //     transform: translate3d(50%, 50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    //       rotateY(0deg) rotateZ(0deg) skew(0deg);
+    //     transition: $hero-transition;
+    //   }
+    // }
   }
+
   .connect {
     width: 40%;
     height: 60%;

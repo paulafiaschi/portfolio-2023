@@ -1,5 +1,5 @@
 $blue-gradient: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-$hero-transition: width 1s, height 1s, transform 1s;
+$hero-transition: width 1s, height 1s, transform 1s, background-color 0.5s;
 
 .heroGrid {
   background-image: $blue-gradient;
@@ -20,6 +20,7 @@ $hero-transition: width 1s, height 1s, transform 1s;
     align-items: center;
     font-size: 60px;
     box-sizing: border-box;
+    cursor: pointer;
   }
 
   .logo {
@@ -33,6 +34,7 @@ $hero-transition: width 1s, height 1s, transform 1s;
     top: 40%;
     left: 40%;
     border: none;
+    cursor: default;
   }
 
   .work {

@@ -1,19 +1,20 @@
-import Image from "next/image";
-import styles from "./styles/page.module.css";
+"use client";
+
+import Styles from "../app/styles/home.module.scss";
 import HeroBanner from "./components/HeroBanner";
+import Intro from "./components/Intro";
+import FeaturedProject from "./components/FeaturedProject";
+import Connect from "./components/Connect";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <HeroBanner />
-      <Image
-        className={styles.logo}
-        src="/next.svg"
-        alt="Next.js Logo"
-        width={180}
-        height={37}
-        priority
-      />
-    </main>
+    <>
+      <main className={Styles.main}>
+        <HeroBanner />
+      </main>
+      <Intro />
+      <FeaturedProject />
+      <Connect />
+    </>
   );
 }

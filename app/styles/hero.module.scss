@@ -9,7 +9,7 @@ $hero-transition: width 1s, height 1s, transform 1s, background-color 0.5s;
   left: 0%;
   right: 0%;
   border: solid 2px black;
-  margin: 40px;
+  margin: 40px !important;
   z-index: 99;
 
   > * {

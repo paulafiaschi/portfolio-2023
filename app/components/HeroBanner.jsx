@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
 import Styles from "../styles/hero.module.scss";
 
@@ -98,37 +99,41 @@ export default function HeroBanner() {
 
   return (
     <div className={Styles.heroGrid}>
-      <div
+      <Link
+        href="/work"
         className={Styles.work}
         ref={workElement}
         onMouseEnter={hoverOverWork}
         onMouseLeave={leaveElement}>
         Work
-      </div>
-      <div
+      </Link>
+      <Link
+        href="#connectSection"
         className={Styles.connect}
         ref={connectElement}
         onMouseEnter={hoverOverConnect}
         onMouseLeave={leaveElement}>
         Connect
-      </div>
+      </Link>
       <div className={Styles.logo} ref={logoElement}>
         Pau
       </div>
-      <div
+      <Link
+        href="/about"
         className={Styles.about}
         ref={aboutElement}
         onMouseEnter={hoverOverAbout}
         onMouseLeave={leaveElement}>
         About
-      </div>
-      <div
+      </Link>
+      <Link
+        href="#"
         className={Styles.play}
         ref={playElement}
         onMouseEnter={hoverOverPlay}
         onMouseLeave={leaveElement}>
         Play
-      </div>
+      </Link>
     </div>
   );
 }
